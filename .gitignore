@@ -1,0 +1,43 @@
+# ====================
+# Node.js / NPM
+# ====================
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# ====================
+# Build / Vite
+# ====================
+dist/
+.vite/
+*.local
+
+# ====================
+# OS-specific
+# ====================
+.DS_Store
+Thumbs.db
+
+# ====================
+# Editor / IDE
+# ====================
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# ====================
+# Environment / Secrets
+# ====================
+.env
+.env.local
+.env.*.local
+
+# ====================
+# Logs & temporary files
+# ====================
+*.log
+*.tmp
+*.bak
