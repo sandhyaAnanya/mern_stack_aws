@@ -11,12 +11,6 @@ app.use(express.json());
 
 const path = require("path");
 
-app.use(express.static(path.join(__dirname, "../client/dist")));
-
-app.get(/.*/, (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/dist/index.html"));
-});
-
 app.get("/", (req, res) => {
   res.send("Backend Running");
 });
@@ -60,6 +54,11 @@ app.get("/api/users", async (req, res) => {
   }
 });
 
+app.use(express.static(path.join(__dirname, "../client/dist")));
+
+app.get(/.*/, (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/dist/index.html"));
+});
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
