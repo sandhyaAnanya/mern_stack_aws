@@ -11,10 +11,6 @@ app.use(express.json());
 
 const path = require("path");
 
-app.get("/", (req, res) => {
-  res.send("Backend Running");
-});
-
 app.get("/api/test", (req, res) => {
   res.json({ message: "Backend Connected" });
 });
